@@ -1,0 +1,21 @@
+<application type="com.graphscape.largegraph.apps.large_graph_server_app.LargeGraphServerApplication">
+	<!-- This is use case for module load,not like the provider's module definition,here 
+		is user's usage of module, the configuration should be simply properties -->
+	<container module="com.graphscape.largegraph.modules.large_graph_root.Module">
+		<container module="com.graphscape.largegraph.modules.large_graph_core.Module">
+			<!-- TODO parameters here -->
+		</container>
+
+		<container
+			module="com.graphscape.largegraph.modules.large_graph_server.Module">
+
+		</container>
+
+		<container module="com.graphscape.largegraph.modules.large_graph_web.Module">
+			<parameters>
+				<property name="web.port" value="9001" />
+			</parameters>
+		</container>
+	</container>
+
+</application>

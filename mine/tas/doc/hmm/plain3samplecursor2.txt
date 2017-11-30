@@ -1,0 +1,88 @@
+file:M5-20150401+.csv;
+evaluator.onlylast:false;
+
+
+ 328	0.575= 621/1080,errorHiddens:{0=350, 1=109},succHiddens:{0=511, 1=110}
+ 238	0.603= 566/ 938,errorHiddens:{1=372},succHiddens:{1=566}
+ 319	0.554= 548/ 990,errorHiddens:{0=27, 1=415},succHiddens:{0=123, 1=425}
+ 409	0.533= 465/ 872,errorHiddens:{0=304, 1=103},succHiddens:{0=347, 1=118}
+ 400	0.512= 440/ 860,errorHiddens:{1=420},succHiddens:{1=440}
+ 410	0.499= 377/ 756,errorHiddens:{0=364, 1=15},succHiddens:{0=357, 1=20}
+ 329	0.538= 340/ 632,errorHiddens:{0=292},succHiddens:{0=340}
+ 318	0.463= 332/ 717,errorHiddens:{1=385},succHiddens:{1=332}
+ 490	0.391= 291/ 745,errorHiddens:{0=454},succHiddens:{0=291}
+ 399	0.560= 282/ 504,errorHiddens:{1=222},succHiddens:{1=282}
+ 317	0.636= 262/ 412,errorHiddens:{0=81, 1=69},succHiddens:{0=92, 1=170}
+ 330	0.606= 257/ 424,errorHiddens:{0=46, 1=121},succHiddens:{0=89, 1=168}
+ 237	0.658= 246/ 374,errorHiddens:{0=21, 1=107},succHiddens:{0=63, 1=183}
+ 580	0.766= 245/ 320,errorHiddens:{0=24, 1=51},succHiddens:{0=53, 1=192}
+ 581	0.594= 234/ 394,errorHiddens:{1=160},succHiddens:{1=234}
+ 411	0.514= 226/ 440,errorHiddens:{0=175, 1=39},succHiddens:{0=158, 1=68}
+ 148	0.505= 204/ 404,errorHiddens:{0=200},succHiddens:{0=204}
+ 670	0.500= 201/ 402,errorHiddens:{0=78, 1=123},succHiddens:{0=67, 1=134}
+  57	0.642= 197/ 307,errorHiddens:{1=110},succHiddens:{1=197}
+ 398	0.474= 167/ 352,errorHiddens:{0=140, 1=45},succHiddens:{0=118, 1=49}
+ 671	0.442= 160/ 362,errorHiddens:{1=202},succHiddens:{1=160}
+ 288	0.586= 157/ 268,errorHiddens:{0=51, 1=60},succHiddens:{0=48, 1=109}
+ 421	0.484= 156/ 322,errorHiddens:{0=157, 1=9},succHiddens:{0=151, 1=5}
+ 681	0.555= 152/ 274,errorHiddens:{0=122},succHiddens:{0=152}
+  58	0.364= 150/ 412,errorHiddens:{0=262},succHiddens:{0=150}
+ 491	0.490= 144/ 294,errorHiddens:{0=22, 1=128},succHiddens:{0=34, 1=110}
+ 378	0.461= 140/ 304,errorHiddens:{0=164},succHiddens:{0=140}
+ 388	0.473= 140/ 296,errorHiddens:{0=156},succHiddens:{0=130, 1=10}
+ 689	0.583= 140/ 240,errorHiddens:{1=100},succHiddens:{1=140}
+ 227	0.690= 138/ 200,errorHiddens:{0=24, 1=38},succHiddens:{0=41, 1=97}
+ 492	0.549= 135/ 246,errorHiddens:{1=111},succHiddens:{0=53, 1=82}
+ 297	0.542= 130/ 240,errorHiddens:{0=110},succHiddens:{0=130}
+  47	0.653= 124/ 190,errorHiddens:{0=23, 1=43},succHiddens:{0=17, 1=107}
+ 236	0.803= 122/ 152,errorHiddens:{1=30},succHiddens:{1=122}
+ 501	0.693= 122/ 176,errorHiddens:{1=54},succHiddens:{1=122}
+ 592	0.550= 122/ 222,errorHiddens:{1=100},succHiddens:{1=122}
+ 340	0.536= 118/ 220,errorHiddens:{0=17, 1=85},succHiddens:{0=25, 1=93}
+  48	0.451= 115/ 255,errorHiddens:{1=140},succHiddens:{1=115}
+ 502	0.467= 113/ 242,errorHiddens:{0=63, 1=66},succHiddens:{0=24, 1=89}
+ 688	0.615= 112/ 182,errorHiddens:{0=70},succHiddens:{0=112}
+ 147	0.478= 110/ 230,errorHiddens:{0=120},succHiddens:{0=110}
+ 440	0.440= 110/ 250,errorHiddens:{1=140},succHiddens:{1=110}
+ 521	0.495= 110/ 222,errorHiddens:{0=112},succHiddens:{0=110}
+ 680	0.453= 106/ 234,errorHiddens:{0=81, 1=47},succHiddens:{0=65, 1=41}
+  49	0.425= 105/ 247,errorHiddens:{1=142},succHiddens:{1=105}
+  67	0.630= 102/ 162,errorHiddens:{1=60},succHiddens:{1=102}
+ 127	0.505= 102/ 202,errorHiddens:{0=100},succHiddens:{0=102}
+ 136	0.472= 100/ 212,errorHiddens:{1=112},succHiddens:{1=100}
+ 582	0.470=  94/ 200,errorHiddens:{0=17, 1=89},succHiddens:{0=31, 1=63}
+ 431	0.517=  92/ 178,errorHiddens:{1=86},succHiddens:{1=92}
+ 601	0.377=  92/ 244,errorHiddens:{1=152},succHiddens:{1=92}
+ 307	0.450=  90/ 200,errorHiddens:{1=110},succHiddens:{1=90}
+ 397	0.545=  90/ 165,errorHiddens:{0=9, 1=66},succHiddens:{0=48, 1=42}
+ 661	0.523=  90/ 172,errorHiddens:{1=82},succHiddens:{1=90}
+ 591	0.579=  88/ 152,errorHiddens:{0=12, 1=52},succHiddens:{0=60, 1=28}
+ 207	0.478=  87/ 182,errorHiddens:{0=16, 1=79},succHiddens:{0=33, 1=54}
+ 331	0.592=  84/ 142,errorHiddens:{0=30, 1=28},succHiddens:{0=84}
+ 359	0.369=  82/ 222,errorHiddens:{1=140},succHiddens:{1=82}
+ 571	0.477=  82/ 172,errorHiddens:{0=90},succHiddens:{0=82}
+ 226	0.615=  80/ 130,errorHiddens:{1=50},succHiddens:{1=80}
+ 369	0.533=  80/ 150,errorHiddens:{1=70},succHiddens:{1=80}
+ 350	0.407=  74/ 182,errorHiddens:{0=101, 1=7},succHiddens:{0=73, 1=1}
+ 146	0.439=  72/ 164,errorHiddens:{1=92},succHiddens:{1=72}
+ 137	0.461=  70/ 152,errorHiddens:{0=82},succHiddens:{0=70}
+ 216	0.574=  70/ 122,errorHiddens:{1=52},succHiddens:{1=70}
+ 217	0.636=  70/ 110,errorHiddens:{1=40},succHiddens:{1=70}
+ 611	0.636=  70/ 110,errorHiddens:{0=37, 1=3},succHiddens:{0=47, 1=23}
+ 672	0.778=  70/  90,errorHiddens:{1=20},succHiddens:{1=70}
+ 157	0.385=  69/ 179,errorHiddens:{1=110},succHiddens:{1=69}
+ 198	0.943=  66/  70,errorHiddens:{0=4},succHiddens:{0=50, 1=16}
+ 690	0.388=  62/ 160,errorHiddens:{0=89, 1=9},succHiddens:{0=61, 1=1}
+ 279	0.462=  60/ 130,errorHiddens:{1=70},succHiddens:{1=60}
+ 341	0.462=  60/ 130,errorHiddens:{1=70},succHiddens:{1=60}
+ 610	0.395=  60/ 152,errorHiddens:{0=92},succHiddens:{0=60}
+ 679	0.321=  52/ 162,errorHiddens:{0=80, 1=30},succHiddens:{0=50, 1=2}
+  39	0.714=  50/  70,errorHiddens:{0=20},succHiddens:{0=50}
+  56	0.556=  50/  90,errorHiddens:{1=40},succHiddens:{1=50}
+ 691	1.000=  50/  50,errorHiddens:{},succHiddens:{1=50}
+ 530	0.246=  43/ 175,errorHiddens:{0=132},succHiddens:{0=43}
+  40	0.303=  40/ 132,errorHiddens:{0=92},succHiddens:{0=40}
+ 118	0.800=  40/  50,errorHiddens:{1=10},succHiddens:{1=40}
+ 368	0.400=  40/ 100,errorHiddens:{1=60},succHiddens:{1=40}
+ 512	0.444=  40/  90,errorHiddens:{1=50},succHiddens:{1=40}
+ 572	0.444=  40/  90,errorHiddens:{0=40, 1=10},succHiddens:

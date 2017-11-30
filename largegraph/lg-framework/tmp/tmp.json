@@ -1,0 +1,81 @@
+  {
+    "_content": [
+      "M",
+      {
+        "_payloads": [
+          "O",
+          {
+            "message": [
+              "M",
+              {
+                "_payloads": [
+                  "O",
+                  {
+                    "_eis": [
+                      "ES",
+                      []
+                    ]
+                  }
+                ],
+                "_headers": [
+                  "O",
+                  {
+                    "vertexId": [
+                      "s",
+                      "2e7e3f38-520c-4673-a5a3-259e34e7a0c9"
+                    ],
+                    "_created": [
+                      "s",
+                      "1387374815140"
+                    ],
+                    "_id": [
+                      "s",
+                      "1a1d76de-0e9f-4ab4-91fe-9c6d1a8d0bac"
+                    ],
+                    "_pidp": [
+                      "s",
+                      ""
+                    ],
+                    "_wrapperClass": [
+                      "s",
+                      "com.graphscape.largegraph.core.event.VertexEvent"
+                    ],
+                    "_path": [
+                      "s",
+                      "/events/vertex"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "_eis": [
+              "ES",
+              []
+            ]
+          }
+        ],
+        "_headers": [
+          "O",
+          {
+            "_created": [
+              "s",
+              "1387374815140"
+            ],
+            "_id": [
+              "s",
+              "c3c05edd-5bd9-43ec-b8c9-6a19bcea3390"
+            ],
+            "_pidp": [
+              "s",
+              ""
+            ],
+            "_path": [
+              "s",
+              "/lg/put-message"
+            ]
+          }
+        ]
+      }
+    ],
+    "_path": "/ajax/message"
+  }

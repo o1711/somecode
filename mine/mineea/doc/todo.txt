@@ -1,0 +1,8 @@
+TODO:
+not use min risk 50,but use the min iATR(10) to control openning of order. 
+TODO:
+
+configuration by xml?
+
+TODO:
+test NSDUSD5, add condition,to check if over-buy/sell by RSI.

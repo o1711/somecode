@@ -1,0 +1,22 @@
+<ta>
+
+	<properties environment="env.">
+		<host>localhost</host>
+	</properties>
+
+	<mock-agent dataHome="${env.TA_DATA_HOME}" symbol="EURUSD"
+		url="http://${host}/trader" spread="0.00012">
+		<account id="1" balance="300" />
+		<!-- 
+		<time-bars
+			resource="classpath:org/ta/test/data/EURUSD1-20150413070000-20150413092000.csv" />
+ -->
+ 		<time-bars
+			resource="file:${env.TA_DATA_HOME}/EURUSD1-20150115-20150420.csv" />
+		<tick from="2015.04.13 09.00.00" to="2015.04.13 09.20.00" />
+	</mock-agent>
+
+	<web-server trader="org/ta/trader/test/client/TaMa2AdvisorTest-trader.xml" />
+
+
+</ta>

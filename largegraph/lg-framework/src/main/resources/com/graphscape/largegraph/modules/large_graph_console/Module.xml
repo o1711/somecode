@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module class="com.graphscape.largegraph.modules.large_graph_console.Module">
+
+	<dependicies>
+		<dependicy
+			module="com.graphscape.largegraph.modules.large_graph_client.Module" />
+	</dependicies>
+
+	<components>
+		<component id="entryPointCliHandler"
+			type="com.graphscape.largegraph.console.provider.default_.cli.handlers.ConfigurableDispatchingCliHandler">
+			<handlers>
+				<handler command="help"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.HelpCliHandler">
+				</handler>
+
+				<handler command="add-graph"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.AddGraphCliHandler" />
+
+				<handler command="add-vertex"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.CreateVertexCliHandler" />
+
+				<handler command="add-edge"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.CreateEdgeCliHandler" />
+
+				<handler command="connect"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.ConnectCliHandler" />
+
+				<handler command="cv"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.ChangeVertexCliHandler" />
+
+				<handler command="disconnect"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.DisconnectCliHandler" />
+
+				<handler command="set"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.SetCliHandler" />
+
+				<handler command="get"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.GetCliHandler" />
+
+				<handler command="get-vertex"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.GetVertexCliHandler" />
+
+				<handler command="get-edge"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.GetEdgeCliHandler" />
+
+				<handler command="graph"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.GraphCliHandler" />
+
+				<handler command="lsv"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.ListVertexCliHandler" />
+					
+				<handler command="lse"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.ListEdgeCliHandler" />
+
+				<handler command="lsg"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.ListGraphCliHandler" />
+
+				<handler command="quit"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.QuitCliHandler" />
+
+				<handler command="unkow"
+					type="com.graphscape.largegraph.console.provider.default_.cli.handlers.UnknowCliHandler" />
+
+
+			</handlers>
+
+		</component>
+		<component id="largeGraphConsole"
+			type="com.graphscape.largegraph.console.provider.default_.DefaultLargeGraphConsole"
+			manager="container">
+			<constructor>
+				<parameter resolver="component" id="entryPointCliHandler" />
+			</constructor>
+			<commands>
+
+				<command cmd="add-vertex" description="Add vertex">
+
+					<option opt="k" longOpt="key" hasArgs="true"
+						description="set the attribute key with the value of id" />
+
+				</command>
+
+				<command cmd="add-graph" description="Add graph">
+					<option opt="k" longOpt="key" hasArgs="true"
+						description="set the attribute key with the value of id" />
+				</command>
+
+				<command cmd="add-edge" description="Add edge">
+					<option opt="l" longOpt="label" hasArgs="true"
+						description="the label of the edge" />
+					<option opt="s" longOpt="start" hasArgs="true"
+						description="the start point vertex id" />
+					<option opt="e" longOpt="end" hasArgs="true"
+						description="the end point vertex id" />
+					<option opt="k" longOpt="key" hasArgs="true"
+						description="set the attribute key with the value of id" />
+
+				</command>
+
+				<command cmd="connect" description="Connect">
+
+					<option opt="U" longOpt="url" hasArgs="true" description="the url name" />
+					<option opt="u" longOpt="user" hasArgs="true" description="the user name" />
+					<option opt="p" longOpt="password" hasArgs="true"
+						description="the password name" />
+
+				</command>
+
+				<command cmd="cv" description="Change Vertex">
+					<option opt="i" longOpt="id" hasArgs="true" description="the id of vertex" />
+				</command>
+
+				<command cmd="disconnect" description="Disconnect">
+				</command>
+				<command cmd="get" description="Get">
+					<option opt="k" longOpt="key" hasArgs="true" description="the key" />
+				</command>
+				<command cmd="get-vertex" description="Get vertex">
+					<option opt="i" longOpt="id" hasArgs="true" description="the id of vertex" />
+
+				</command>
+
+				<command cmd="get-edge" description="Get edge">
+					<option opt="i" longOpt="id" hasArgs="true" description="the id of edge" />
+
+				</command>
+
+				<command cmd="graph" description="Graph operation">
+					<option opt="i" longOpt="id" hasArgs="true" description="the id of graph" />
+					<option opt="a" longOpt="add" hasArgs="false" description="adding vertex" />
+					<option opt="r" longOpt="remove" hasArgs="false"
+						description="removing vertex" />
+					<option opt="c" longOpt="clear" hasArgs="false" description="clear graph" />
+					<option opt="d" longOpt="delete" hasArgs="false"
+						description="delete graph" />
+					<option opt="v" longOpt="vertex" hasArgs="true" description="the id of vertex" />
+
+				</command>
+
+				<command cmd="help" description="Print help">
+
+				</command>
+
+				<command cmd="lsg" description="List graph">
+					<option opt="v" longOpt="vertex" hasArgs="true" description="the id of vertex" />
+				</command>
+
+				<command cmd="lse" description="List edge">
+					<option opt="v" longOpt="vertex" hasArgs="true" description="the id of vertex" />
+					<option opt="g" longOpt="graph" hasArgs="true" description="the id of graph" />
+					<option opt="O" longOpt="outgoing" hasArgs="false" description="outgoing direction" />
+					<option opt="I" longOpt="incoming" hasArgs="false" description="incoming direction" />
+					<option opt="l" longOpt="label" hasArgs="true" description="the label of edge" />
+					
+				</command>
+
+				<command cmd="lsv" description="List vertex">
+					<option opt="g" longOpt="group" hasArgs="true" description="the id of graph" />
+				</command>
+
+				<command cmd="set" description="Set">
+					<option opt="k" longOpt="key" hasArgs="true" description="the key" />
+					<option opt="v" longOpt="value" hasArgs="true" description="the value" />
+
+				</command>
+				<command cmd="quit" description="Exit">
+
+				</command>
+				
+
+			</commands>
+
+		</component>
+
+	</components>
+</module>

@@ -1,0 +1,9 @@
+
+<config>
+
+	<config name="WebApp.UICORE">
+		<context.path value="/uicore" />
+	</config>
+
+
+</config>

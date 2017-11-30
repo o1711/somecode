@@ -1,0 +1,12 @@
+/**
+ * Dec 15, 2013
+ */
+package com.graphscape.commons.lang;
+
+/**
+ * @author wuzhen0808@gmail.com
+ * 
+ */
+public interface BuilderI<T> {
+	public T build();
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE project [
+	<!ENTITY common.build SYSTEM "../fs-building/common-files/common.build.xml">
+]>
+
+<project name="fs-integrated" default="publish" xmlns:ivy="antlib:org.apache.ivy.ant">
+	 &common.build;
+	
+	<target name="post-package">
+		<!-- -->
+		<zip destfile="${dir.target}/fs-bin-${fs.revision}.zip" basedir="${dir.src}/impl/dist">
+			<zipfileset dir="${dir.target}/runtime/lib" prefix="lib">
+
+				<exclude name="commons-daemon-*.jar" />
+				<!--jetty 9 require servlet 3.0,but gwt related jars contans a low version of java servlet api,which will cause NoSuchMethodError,so remove them.
+				-->
+				<exclude name="gwt-*.jar" />
+
+			</zipfileset>
+			<zipfileset dir="${dir.target}" includes="fs-integrated-api-${fs.revision}.jar" prefix="bin" />
+			<zipfileset dir="${dir.target}" includes="fs-integrated-impl-${fs.revision}.jar" prefix="bin" />
+			<zipfileset dir="${dir.target}/runtime/lib" includes="commons-daemon-*.jar" prefix="bin" />
+
+		</zip>		
+	</target>
+	
+	<target name="unzip" >
+		<antcall target="package"/>
+		
+		<unzip src="${dir.target}/fs-bin-${fs.revision}.zip" dest="${dir.target}/fs-bin-${fs.revision}" />
+		<chmod file="${dir.target}/fs-bin-${fs.revision}/bin/*.sh" perm="700" />
+
+	</target>
+
+</project>

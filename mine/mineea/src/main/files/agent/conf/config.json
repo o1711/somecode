@@ -1,0 +1,5 @@
+{
+	"type":"agent",	
+	"host":"localhost",
+	"uri":"/trader"	
+}

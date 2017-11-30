@@ -1,0 +1,17 @@
+<application
+	type="com.graphscape.whosegraph.apps.whose_graph_shell_app.WhoseGraphShellApplication">
+	<!-- This is use case for module load,not like the provider's module definition,here 
+		is user's usage of module, the configuration should be simply properties -->
+	<container module="com.graphscape.whosegraph.modules.whose_graph_root.Module">
+		<container
+			module="com.graphscape.largegraph.modules.large_graph_client.Module">
+			<!-- TODO parameters here -->
+		</container>
+
+		<container
+			module="com.graphscape.whosegraph.modules.whose_graph_shell.Module">
+			<!-- TODO parameters here -->
+		</container>
+	</container>
+
+</application>

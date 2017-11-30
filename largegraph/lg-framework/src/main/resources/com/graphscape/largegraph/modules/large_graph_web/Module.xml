@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module class="com.graphscape.largegraph.modules.large_graph_web.Module">
+	<dependencies>
+		<dependency module="com.graphscape.largegraph.modules.large_graph_server.Module" />
+	</dependencies>
+	<components>
+		<component id="webServiceProvider" type="com.graphscape.largegraph.web.provider.default_.DefaultWebServiceProvider">
+			<constructor>
+				<parameter resolver="component" factory="com.graphscape.largegraph.modules.large_graph_server.Module"
+					id="largeGraphServer" />
+				<parameter resolver="component" factory="com.graphscape.largegraph.modules.large_graph_server.Module"
+          id="authProvider" />	
+			</constructor>
+
+		</component>
+		<component id="httpServiceProvider" type="com.graphscape.largegraph.web.provider.default_.HttpServiceProvider">
+			<constructor>
+				<parameter resolver="component" id="webServiceProvider" />
+				<parameter resolver="component" factory="com.graphscape.largegraph.modules.large_graph_server.Module"
+					id="sessionManager" />
+				<parameter resolver="component" factory="com.graphscape.largegraph.modules.large_graph_server.Module"
+					id="queueManager" />
+
+			</constructor>
+			<property name="maxMessageProcessingTime" value="10S" />
+		</component>
+
+		<component id="httpServer" type="com.graphscape.commons.http.provider.default_.DefaultHttpServer"
+			manager="container">
+			<constructor>
+				<parameter resolver="component" id="httpServiceProvider" />
+			</constructor>
+			<property name="port" resolver="environment" var="web.port" />
+			<property name="cometUri" value="comet" />
+		</component>
+
+	</components>
+</module>

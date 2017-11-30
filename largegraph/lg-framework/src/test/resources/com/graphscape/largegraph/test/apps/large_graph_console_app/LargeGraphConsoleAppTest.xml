@@ -1,0 +1,40 @@
+<test>
+
+	<server-application>
+
+		<environment>
+			<property name="1" value="1" />
+		</environment>
+
+		<container module="com.graphscape.largegraph.modules.large_graph_root.Module">
+			<container module="com.graphscape.largegraph.modules.large_graph_core.Module">
+
+			</container>
+			<container module="com.graphscape.largegraph.modules.large_graph_server.Module">
+
+			</container>
+			<container module="com.graphscape.largegraph.modules.large_graph_web.Module">
+
+			</container>
+
+		</container>
+	</server-application>
+	
+	<console-application>
+
+		<environment>
+			<property name="1" value="1" />
+		</environment>
+
+		<container module="com.graphscape.largegraph.modules.large_graph_root.Module">
+
+			<container module="com.graphscape.largegraph.modules.large_graph_client.Module">
+			</container>
+
+			<container module="com.graphscape.largegraph.modules.large_graph_console.Module">
+			</container>
+
+		</container>
+	</console-application>
+
+</test>

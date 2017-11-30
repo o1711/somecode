@@ -1,0 +1,11 @@
+<config>
+
+	<config name="expectorDsFacade">
+		<defaultUserIconDataUrl value="res:;,/open/resource/imgs/user_icon.png" />
+		<defaultUserIconDataUrl_male value="res:;,/open/resource/imgs/user_icon_male.png" />
+		<defaultUserIconDataUrl_female value="res:;,/open/resource/imgs/user_icon_female.png" />
+
+	</config>
+
+
+</config>

@@ -1,0 +1,15 @@
+<tarder>
+	<tickRequestHandler>
+		<advisorTickHandler>
+			<advisors>
+				<advisor
+					class="org.ta.trader.ma2.TaMa2OrderAdvisor"
+					id="1"
+					direction="UP"
+					syriod="EURUSD.M5"
+					lots="0.02" />
+			</advisors>
+
+		</advisorTickHandler>
+	</tickRequestHandler>
+</tarder>

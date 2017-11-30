@@ -1,0 +1,37 @@
+curl -XGET 'http://localhost:9200/nodes/exp-message/_search?pretty=true' -d '
+{
+  "from" : 0,
+  "size" : 50,
+  "query" : {
+    "bool" : {
+      "must" : [ {
+        "term" : {
+          "type_" : "exp-message"
+        }
+      }, {
+        "term" : {
+          "expId2" : "PA44Od3lSp-FG13aYbs-2g"
+        }
+      }, {
+        "term" : {
+          "accountId2" : "user1@some.com"
+        }
+      }, {
+        "range" : {
+          "timestamp_" : {
+            "from" : "2013-03-24T00:39:23.661Z",
+            "to" : null,
+            "include_lower" : true,
+            "include_upper" : true
+          }
+        }
+      } ]
+    }
+  },
+  "explain" : false,
+  "sort" : [ {
+    "timestamp_" : {
+      "order" : "desc"
+    }
+  } ]
+}'

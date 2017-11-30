@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+
+--DONE,Jan 2014--
+
+Remove method SegmentI.getAsRegion(). It is not a good idea to directly operate on the underlying resource from window.
+
+It looks like the byte array is good enough in performance. And we must figure out how to cache the entry in index/tree operation.
+
+
+--TODO,Jan 2014--
+Test rbtree clear.
+
+
+--DONE --
+In large server,
+Add error infor in response when no handler found for message input.
+--
+
+-- DONE -- 
+Refactor message package 
+--
+
+
+-- --
+Add User Auth and Vertex right management. 
+--
+
+--DONE--
+allow "name" as the property of configuration.
+
+--DONE --
+
+add dependency configuration element in module definition xml file.
+
+--DONE--
+remove the qualifier:MessageContextI in the generic type declaration: PathBasedHandlerResolver<T extends MessageContextI>.
+So it should be just:<T> 
+
+--DONE--
+json marshalling format improvement: instead of array json with type code,allow string omit the type code:"s".
+like this:
+["s","stringvalue"]
+=>
+"stringvalue"
+
+--DONE--
+add transfer_format and support to use _json_message as the payload to carry the user message by ajax comet service provider.
+[
+  {
+    "_trans_format":"json",
+    "_json_message":{
+      ... ...
+    }
+    "_path":"/ajax/message"
+  }
+]
+--
+Des 2013
+--

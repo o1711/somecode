@@ -1,0 +1,1 @@
+-Dgwt.args="-runStyle Manual:1"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module class="com.graphscape.largegraph.modules.large_graph_core.Module">
+	<components>
+
+		<component id="largeGraph"
+			type="com.graphscape.largegraph.core.provider.default_.DefaultLargeGraph"
+			manager="container">
+
+		</component>
+	</components>
+</module>

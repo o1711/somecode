@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module class="com.graphscape.largegraph.modules.large_graph_server.Module">
+	<dependencies>
+		<dependency module="com.graphscape.largegraph.modules.large_graph_core.Module" />
+	</dependencies>
+	<components>
+		<component id="queueManager" type="com.graphscape.largegraph.server.provider.default_.DefaultMessageQueueManager">
+
+		</component>
+		<component id="sessionManager" type="com.graphscape.commons.session.provider.default_.DefaultSessionManager">
+
+		</component>
+
+		<component id="authProvider" type="com.graphscape.largegraph.server.provider.default_.DefaultAuthProvider">
+			<constructor>
+				<parameter resolver="component" factory="com.graphscape.largegraph.modules.large_graph_core.Module"
+					id="largeGraph" />
+			</constructor>
+		</component>
+
+		<component id="messageHandlerResolver" type="com.graphscape.commons.configuration.support.ConfigurablePathBasedHandlerResolver">
+			<handlers>
+
+				<handler path="/lg/put-message"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphPutMessageHandler" />
+				<handler path="/lg/get-graph"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphGetGraphHandler" />
+				<handler path="/lg/get-vertex"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphGetVertexHandler" />	
+				<handler path="/lg/get-vertex-iterator"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphGetVertexIteratorHandler" />
+				<handler path="/lg/get-graph-iterator"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphGetGraphIteratorHandler" />
+				<handler path="/lg/get-edge-iterator"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphGetEdgeIteratorHandler" />
+							
+				<handler path="/lg/graph-add-vertex"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphGraphAddVertexHandler" />
+				<handler path="/lg/graph-remove-vertex"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphGraphRemoveVertexHandler" />
+						
+				<handler path="/lg/add-graph"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphAddGraphHandler" />
+				<handler path="/lg/add-vertex"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphAddVertexHandler" />
+				<handler path="/lg/add-edge"
+					type="com.graphscape.largegraph.server.provider.default_.handler.LargeGraphAddEdgeHandler" />
+			</handlers>
+		</component>
+
+		<component id="largeGraphServer" type="com.graphscape.largegraph.server.provider.default_.DefaultLargeGraphServer"
+			manager="container">
+			<constructor>
+				<parameter resolver="component" factory="com.graphscape.largegraph.modules.large_graph_core.Module"
+					id="largeGraph" />
+				<parameter resolver="component" id="sessionManager" />
+				<parameter resolver="component" id="messageHandlerResolver" />
+			</constructor>
+		</component>
+
+	</components>
+</module>

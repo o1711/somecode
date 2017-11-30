@@ -1,0 +1,22 @@
+<config>
+
+
+	<config name="WebApp.WSA">
+		<context.path value="/wsa" />
+	</config>
+
+	<config name="WebSocketCometProtocol">
+		<config name="servletHolderTemplate">
+			<property name="path" value="/{name}" />
+			<prefix name="servlet">
+				<property name="class" value="com.fs.websocket.impl.jetty.JettyWsServletImpl" />
+			</prefix>
+			<config name="init-parameters">
+				<maxMessageSize value="$comet.maxMessageSize" />
+				<maxIdleTime value="$comet.maxIdleTimeMs" />
+			</config>
+
+		</config>
+	</config>
+
+</config>

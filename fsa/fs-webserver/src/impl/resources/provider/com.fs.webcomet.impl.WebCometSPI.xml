@@ -1,0 +1,27 @@
+<config>
+
+	<config name="Object.COMET_FACTORY">
+
+	</config>
+
+	<config name="WebApp.AJA">
+		<context.path value="/aja" />
+	</config>
+
+	<config name="AjaxCometProtocol">
+		<config name="servletHolderTemplate">
+			<property name="path" value="/{name}" />
+			<prefix name="servlet">
+				<property name="class" value="com.fs.webcomet.impl.ajax.AjaxCometServlet" />
+			</prefix>
+			<config name="init-parameters">
+				<!-- The default setting for long-live request to wait the first msg. -->
+				<!-- Client should be able to provide this argument when request? -->
+				<timeoutForFirstMessage value="$ajax.timeoutForFirstMessage" />
+				<maxIdleTime value="$comet.maxIdleTimeMs" />
+			</config>
+
+		</config>
+	</config>
+
+</config>

@@ -1,0 +1,60 @@
+<config>
+
+	<config name="gridMember" class="com.fs.gridservice.commons.impl.GridMemberImpl">
+
+	</config>
+
+	<config name="gridFacade" class="com.fs.gridservice.commons.impl.GridFacadeImpl">
+
+	</config>
+
+
+	<config name="cometListener" class="com.fs.gridservice.commons.impl.terminal.comet.TerminalFactoryCometListener">
+
+	</config>
+
+	<config name="sessionManager" class="com.fs.gridservice.commons.impl.session.SessionManagerImpl">
+
+	</config>
+
+	<config name="endPointGoManager" class="com.fs.gridservice.commons.impl.GridedObjectManagerImpl">
+		<goItfClass value="com.fs.gridservice.commons.api.gobject.EndPointGoI" />
+	</config>
+
+	<config name="terminalManager" class="com.fs.gridservice.commons.impl.terminal.TerminalManagerImpl">
+	</config>
+
+	<config name="clientManager" class="com.fs.gridservice.commons.impl.client.ClientManagerImpl">
+	</config>
+
+	<config name="presenceManager" class="com.fs.gridservice.commons.impl.presence.PresenceManagerImpl">
+	</config>
+
+	<config name="chatGroupManager" class="com.fs.gridservice.commons.impl.gchat.ChatGroupManagerImpl">
+	</config>
+
+	<config name="participantManager" class="com.fs.gridservice.commons.impl.gchat.ParticipantManagerImpl" />
+
+	<config name="globalEventDispatcher" class="com.fs.gridservice.commons.impl.GlobalEventDispatcher">
+		<!-- engine is created from EngineSPI -->
+		<engine value="engine-1" />
+		<handlers value="ping,wsmre,gchat" />
+
+		<config name="ping" path="/events/ping" class="com.fs.gridservice.commons.impl.handler.global.ping.PingHandler" />
+		<config name="wsmre" path="/events/terminal" class="com.fs.gridservice.commons.impl.handler.global.terminal.TerminalAuthHandler" />
+		<config name="gchat" path="/events/gchat" class="com.fs.gridservice.commons.impl.handler.global.gchat.GroupChatEventHandler" />
+
+	</config>
+
+	<config name="localEventDispatcher" class="com.fs.gridservice.commons.impl.LocalEventDispatcher">
+		<!-- engine is created from EngineSPI -->
+		<engine value="engine-2" />
+		<handlers value="wsmsg" />
+
+		<config name="wsmsg" path="/events/terminal" class="com.fs.gridservice.commons.impl.handler.local.terminal.TermialMessageSendEventHandler" />
+
+	</config>
+
+
+
+</config>

@@ -1,0 +1,183 @@
+# This is a test scenario.
+# !:instruct line
+# !start this is the  !end
+
+
+
+!print-line
+!prompt=:::::: 
+!start
+:::::: help
+usage: help <command>
+
+The most commonly used commands are:
+add-edge   Add edge
+add-graph  Add graph
+add-vertex Add vertex
+connect    Connect
+cv         Change Vertex
+disconnect Disconnect
+get        Get
+get-edge   Get edge
+get-vertex Get vertex
+graph      Graph operation
+help       Print help
+lse        List edge
+lsg        List graph
+lsv        List vertex
+quit       Exit
+set        Set
+
+:::::: help add-vertex
+usage: add-vertex [-k <arg>] 
+Add vertex
+  -k,--key <arg>             set the attribute key with the value of id
+  
+:::::: set -k url -v http://localhost:9002
+
+:::::: get -k url
+url=http://localhost:9002
+
+:::::: set -k user -v tester
+
+:::::: set -k password -v testing 
+
+:::::: connect -U http://localhost:9002/comet/ajax -u root -p root
+connecting...
+connected
+
+:::::: add-vertex -k vid1 '{"p1": "v1value1", "p2" : "v1value2", "p3" : "v1value3"}'
+vertex added
+
+:::::: add-vertex -k vid2 '{"p1": "v2value1", "p2" : "v2value2", "p3" : "v2value3"}'
+vertex added
+
+:::::: add-vertex -k vid3 '{"p1": "v3value1", "p2" : "v3value2", "p3" : "v3value3"}'
+vertex added
+
+:::::: add-vertex -k vid4 '{"p1": "v4value1", "p2" : "v4value2", "p3" : "v4value3"}'
+vertex added
+
+:::::: add-vertex -k vid5 '{"p5": "v5value1", "p2" : "v5value2", "p3" : "v5value3"}'
+vertex added
+
+:::::: add-edge -l MYEDGE -s $vid1 -e $vid2 
+edge added
+
+:::::: add-edge -l MYEDGE -s $vid2 -e $vid3 
+edge added
+
+:::::: add-edge -l MYEDGE -s $vid3 -e $vid4 
+edge added
+
+:::::: add-edge -l MYEDGE -s $vid4 -e $vid5 
+edge added
+
+:::::: get-vertex -i $vid1
+vertex id:v1
+{p1=p1value,p2=p2value,p3=p3value}
+
+:::::: add-graph -k gid1
+graph added,id:?
+
+:::::: graph -i $gid1 -a -v $vid1
+vertex added to group
+
+:::::: graph -i $gid1 -a -v $vid2
+vertex added to group
+
+:::::: add-graph -k gid2
+graph added,id:?
+
+:::::: graph -i $gid2 -a -v $vid3
+vertex added to group
+
+:::::: graph -i $gid2 -a -v $vid4
+vertex added to group
+
+:::::: add-graph -k gid3
+graph added,id:?
+
+:::::: graph -i $gid3 -a -v $vid2
+vertex added to group
+
+:::::: graph -i $gid3 -a -v $vid3
+vertex added to group
+
+:::::: graph -i $gid3 -a -v $vid4
+vertex added to group
+
+:::::: graph -i $gid3 -a -v $vid5
+vertex added to group
+
+:::::: lsv -g $gid1
+$vid1
+$vid2
+
+:::::: lsv -g $gid2
+$vid3
+$vid4
+
+:::::: lsv -g $gid3
+$vid2
+$vid3
+$vid4
+$vid5
+
+:::::: lsg -v $vid1
+$gid1
+
+:::::: lsg -v $vid2
+$gid1
+$gid3
+
+:::::: lsg -v $vid3
+$gid2
+$gid3
+
+:::::: lse -v $vid1 -l MYEDGE
+-[MYEDGE]->$vid2
+
+:::::: lse -v $vid2 -l MYEDGE
+<-[MYEDGE]-$vid1
+-[MYEDGE]->$vid3
+
+:::::: lse -v $vid3 -l MYEDGE
+<-[MYEDGE]-$vid2
+-[MYEDGE]->$vid4
+
+:::::: lse -v $vid4 -l MYEDGE
+<-[MYEDGE]-$vid3
+-[MYEDGE]->$vid5
+
+:::::: graph -i $gid1 -r -v $vid1
+vertex removed from group
+
+:::::: graph -i $gid1 -r -v $vid2
+vertex removed from group
+
+:::::: graph -i $gid1 -c
+graph cleared
+
+:::::: graph -i $gid2 -c
+graph cleared
+
+:::::: graph -i $gid3 -c
+graph cleared
+
+:::::: graph -i $gid1 -d
+graph deleted
+
+:::::: graph -i $gid2 -d
+graph deleted
+
+:::::: graph -i $gid3 -d
+graph deleted
+
+:::::: disconnect
+disconnected
+
+:::::: quit
+exited
+
+!end

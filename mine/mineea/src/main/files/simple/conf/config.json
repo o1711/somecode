@@ -1,0 +1,20 @@
+{
+	"type":"root",
+	"traders":[
+		{
+			"type":"trader",
+			"id":"1",
+			"symbol":"EURUSD",
+			"period":"5",
+			"direct":"DOWN"
+		},
+		{
+			"type":"trader",
+			"id":"2",
+			"symbol":"EURUSD",
+			"period":"5",
+			"direct":"UP"
+		}
+		
+	]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+
+	<inherits name='com.graphscape.topology.client.gwt.impl.UiCommonsImpl' />
+	<entry-point class='com.graphscape.topology.client.gwt.impl.app.MainAppEntryPoint' />
+
+	<source path='app' />
+
+</module>

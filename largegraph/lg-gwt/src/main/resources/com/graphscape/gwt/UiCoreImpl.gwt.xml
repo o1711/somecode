@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+
+	<inherits name="com.google.gwt.dom.DOM" />
+
+	<inherits name='com.google.gwt.json.JSON' />
+
+	<inherits name='org.fusesource.restygwt.RestyGWT' />
+
+	<source path='core' />
+	
+	<replace-with class="com.graphscape.gwt.core.provider.default_.ClientLoaderImpl">
+		<when-type-is class="com.graphscape.gwt.core.ClientLoader" />
+	</replace-with>
+	
+	<replace-with class="com.graphscape.gwt.core.provider.default_.UiCoreGwtSPIImpl">
+		<when-type-is class="com.graphscape.gwt.core.UiCoreGwtSPI" />
+	</replace-with>
+	
+	<replace-with class="com.graphscape.gwt.core.provider.default_.ContainerImpl">
+		<when-type-is class="com.graphscape.gwt.core.ContainerI" />
+	</replace-with>
+		
+
+</module>

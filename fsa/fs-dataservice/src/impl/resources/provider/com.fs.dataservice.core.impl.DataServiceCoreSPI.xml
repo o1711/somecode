@@ -1,0 +1,16 @@
+
+<config>
+	<config name="dataServiceFactory" class="com.fs.dataservice.core.impl.elastic.ElasticDataServiceFactoryImpl">
+
+		<host value="$elastic.host" />
+		<port value="$elastic.port" />
+		<cleanAtInit value="$data.cleanAtInit" />
+		<isTest value="$testing" />
+		<config name="metaInfo">
+			<version value="$data.version" />
+			<owner value="$data.owner" />
+			<password value="$data.password" />
+		</config>
+	</config>
+
+</config>

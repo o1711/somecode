@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<project name="MTA">
+
+	<property environment="env" />
+	<property file="build.properties" />
+
+
+	<target name="clean">
+		<delete dir="target" />
+	</target>
+
+	<target name="deploy" depends="deploy-test-advisor">
+
+	</target>
+	<target name="tmp">
+		<copy todir="target/tmp">
+			<fileset dir="src/mqh">
+			</fileset>
+			<globmapper from="*.mqh" to="*.h" />
+		</copy>
+		<copy todir="target/tmp">
+			<fileset dir="src/mql4">
+			</fileset>
+			<globmapper from="*.mq4" to="*.cpp" />
+		</copy>
+
+	</target>
+	<target name="copy-source">
+		<sync todir="target/gen-src/mql4">
+			<fileset dir="src/main/cpp">
+				<include name="**/*.h" />
+				<include name="**/*.cpp" />
+			</fileset>
+			<fileset dir="src/main/mq4">
+				<include name="**/*.mq4" />
+			</fileset>
+
+		</sync>
+	</target>
+	<target name="generate-source" depends="copy-source">
+		<replace dir="target/gen-src/mql4">
+
+			<replacefilter>
+				<replacetoken>-&gt;</replacetoken>
+				<replacevalue>.</replacevalue>
+			</replacefilter>
+
+		</replace>
+		<!-- uncomment the define of MQL-->
+		<replace file="target/gen-src/mql4/DefineMql.h">
+			<replacefilter>
+				<replacetoken>//#</replacetoken>
+				<replacevalue>#</replacevalue>
+			</replacefilter>
+		</replace>
+		<!-- replace @version@ and @project@-->
+		<replace dir="target/gen-src/mql4" propertyFile="build.properties">
+			<replacefilter token="@version@" property="ta.version" />
+			<replacefilter token="@project@" property="ta.project" />
+		</replace>
+	</target>
+
+	<target name="compile-advisor" depends="generate-source">
+		<exec executable="${CC}">
+			<arg value="/mql4" />
+			<arg value="target/gen-src/mql4/mine/${ta.project}.mq4" />
+		</exec>
+	</target>
+
+	<target name="deploy-test-advisor" depends="compile-advisor">
+		<copy file="target/gen-src/mql4/mine/${ta.ex4}" tofile="${mt4.experts.dir}/mine/${ta.ex4.testing}" />
+		<!-- copy files-->
+		<copy todir="${mt4.tester.files.dir}/${ta.project}">
+			<fileset dir="src/main/files/${ta.project}" />
+		</copy>
+	</target>
+
+	<target name="release-advisor" depends="clean,compile-advisor">
+		<copy file="target/gen-src/mql4/mine/${ta.ex4}" tofile="${mt4.experts.dir}/mine/${ta.ex4.release}" />
+		<!-- copy files-->
+		<copy todir="${mt4.files.dir}/${ta.project}-${ta.version}">
+			<fileset dir="src/main/files/${ta.project}" />
+		</copy>
+	</target>
+
+
+</project>
