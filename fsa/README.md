@@ -16,7 +16,7 @@ This is a POC project that implements a instant comunication system. It is mainl
 
 ### Entry point for reading and understanding the code:
 
-* Following SPIs(service provider interface) is the entry points for understanding what kind of function/component are provided. This list can be found [here](fs-integrated/src/impl/dist/conf/fs-spim.properties).
+The entry point class is this one:[fs-integrated/src/impl/java/com/fs/integrated/Server.java](fs-integrated/src/impl/java/com/fs/integrated/Server.java).It loads following SPI(service provider interface) providers. Providers are defined in resource file:[fs-integrated/src/impl/dist/conf/fs-spim.properties](fs-integrated/src/impl/dist/conf/fs-spim.properties).
 
 [SPI.0.class=com.fs.commons.impl.CommonsSPI](fs-commons/src/impl/java/com/fs/commons/impl/CommonsSPI.java)
 
