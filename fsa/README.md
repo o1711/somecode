@@ -1,3 +1,6 @@
+### Motivation.
+
+This is a POC project that implements a instant comunication system. It is mainly built on top of Hazelcast, Elastic Search and GWT. The objective is study how to buiding a scalable and easy-to-maintain system.
 
 ### Sub project list
 - fs-building:	Building script.
@@ -28,8 +31,8 @@
 - SPI.10.class=com.fs.uiclient.impl.UiClientImplSPI
 - SPI.11.class=com.fs.integrated.IntegratedSPI
 
-###If you want to build.
+### If you want to build.(WARN:It's a bit hard,you may feel frustrated.)
 
-Click [here](fs-building/readme.txt) for instructions of building.
+See [fs-building/readme.txt](fs-building/readme.txt) for instructions of building.
 
 
