@@ -8,4 +8,4 @@ mine:
 	A quantative trading program, running as the plugin for MT4.
 
 fsa:
-	A social WEB applicatioin.
+	A social WEB application. [See Detail (fsa/README.md)]
