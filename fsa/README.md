@@ -1,6 +1,6 @@
 ### Motivation.
 
-This is a POC project that implements a instant comunication system. It is mainly built on top of Hazelcast, Elastic Search and GWT. The objective is study how to buiding a scalable and easy-to-maintain system.
+This is a POC project that implements a instant comunication system. It is mainly built on top of **Hazelcast**, **Elastic Search** and **GWT**. The objective is study how to buiding a scalable and easy-to-maintain system.
 
 ### Sub project list
 - fs-building:	Building script.
