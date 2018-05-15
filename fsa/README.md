@@ -18,18 +18,29 @@ This is a POC project that implements a instant comunication system. It is mainl
 
 * Following SPIs(service provider interface) is the entry points for understanding what kind of function/component are provided. This list can be found [here](fs-integrated/src/impl/dist/conf/fs-spim.properties).
 
-- SPI.0.class=com.fs.commons.impl.CommonsSPI
-- SPI.1.class=com.fs.webserver.impl.WebServerSPI
-- SPI.2.class=com.fs.webcomet.impl.WebCometSPI
-- SPI.3.class=com.fs.websocket.impl.WebSocketSPI
-- SPI.4.class=com.fs.dataservice.core.impl.DataServiceCoreSPI
-- SPI.5.class=com.fs.gridservice.core.impl.GsCoreSPI
-- SPI.6.class=com.fs.gridservice.commons.impl.GsCommonsSPI
-- SPI.7.class=com.fs.expector.dataservice.impl.ExpectorDsSPI
-- SPI.8.class=com.fs.expector.gridservice.impl.ExpectorGsSPI
-- SPI.9.class=com.fs.uicore.impl.UiCoreImplSPI
-- SPI.10.class=com.fs.uiclient.impl.UiClientImplSPI
-- SPI.11.class=com.fs.integrated.IntegratedSPI
+[SPI.0.class=com.fs.commons.impl.CommonsSPI](fs-commons/src/impl/java/com/fs/commons/impl/CommonsSPI.java)
+
+[SPI.1.class=com.fs.webserver.impl.WebServerSPI](fs-webserver/src/impl/java/com/fs/webserver/impl/WebServerSPI.java)
+
+[SPI.2.class=com.fs.webcomet.impl.WebCometSPI](fs-webserver/src/impl/java/com/fs/webcomet/impl/WebCometSPI.java)
+
+[SPI.3.class=com.fs.websocket.impl.WebSocketSPI](fs-webserver/src/impl/java/com/fs/websocket/impl/WebSocketSPI.java)
+
+[SPI.4.class=com.fs.dataservice.core.impl.DataServiceCoreSPI](fs-dataservice/src/impl/java/com/fs/dataservice/core/impl/DataServiceCoreSPI.java)
+
+[SPI.5.class=com.fs.gridservice.core.impl.GsCoreSPI](fs-gridservice/src/impl/java/com/fs/gridservice/core/impl/GsCoreSPI.java)
+
+[SPI.6.class=com.fs.gridservice.commons.impl.GsCommonsSPI](fs-gridservice/src/impl/java/com/fs/gridservice/commons/impl/GsCommonsSPI.java)
+
+[SPI.7.class=com.fs.expector.dataservice.impl.ExpectorDsSPI](fs-expector/src/impl/java/com/fs/expector/dataservice/impl/ExpectorDsSPI.java)
+
+[SPI.8.class=com.fs.expector.gridservice.impl.ExpectorGsSPI](fs-expector/src/impl/java/com/fs/expector/gridservice/impl/ExpectorGsSPI.java)
+
+[SPI.9.class=com.fs.uicore.impl.UiCoreImplSPI](fs-uicore/src/impl/java/com/fs/uicore/impl/UiCoreImplSPI.java)
+
+[SPI.10.class=com.fs.uiclient.impl.UiClientImplSPI](fs-uiclient/src/impl/java/com/fs/uiclient/impl/UiClientImplSPI.java)
+
+[SPI.11.class=com.fs.integrated.IntegratedSPI](fs-integrated/src/impl/java/com/fs/integrated/IntegratedSPI.java)
 
 ### If you want to build.(WARN:It's a bit hard,you may feel frustrated.)
 
